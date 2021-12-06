@@ -1,12 +1,13 @@
-import Footer from "../components/Footer/Footer"
+import SubscribeForm from "../components/SubscribeForm/SubscribeForm";
+import Header from "../components/Header/Header";
+import FinanceForm from "../components/FinanceForm/FinanceForm";
 
 function Home() {
-	return (
-		<main>
-			<h1>Home</h1>
-			<Footer />
-		</main>
-	)
+  return (
+    <main>
+      <FinanceForm />
+    </main>
+  );
 }
 
-export default Home
+export default Home;

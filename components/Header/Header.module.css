@@ -1,0 +1,26 @@
+.top {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  font-size: 16px;
+}
+
+.icon {
+  margin: 0 120px;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+
+.searchTop {
+  outline: none;
+  margin-left: 500px;
+  padding: 10.5px 18.1px 9.6px 18.3px;
+  border-radius: 10px;
+  border: solid 1px rgba(255, 230, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,69 @@
+.formContainer {
+  height: 900px;
+  width: 812px;
+  border-radius: 20px;
+}
+
+.inner {
+  width: 100%;
+  height: 900px;
+  background-image: url("../../public/test-payment.jpg");
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.inner h1 {
+  font-size: 60px;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 155px;
+  margin-bottom: 0;
+}
+
+.inner form {
+  background-color: white;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 60px 95px;
+  gap: 60px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.inputs button {
+  border: none;
+  outline: none;
+  background-color: rgba(112, 112, 112, 0.2);
+  border-radius: 15px;
+  gap: 20px;
+  width: 121px;
+  height: 50px;
+  margin: 55px 16px 72px;
+  padding: 11px 37px 10px 38px;
+}
+
+.inputs input {
+  width: 200px;
+  height: 50px;
+  margin: 55px 5px 72px 16px;
+  padding: 15px 60px;
+  border-radius: 15px;
+  border: solid 1px #707070;
+}
+
+.payButton {
+  width: 260px;
+  height: 60px;
+  background-color: var(--main-green);
+  color: var(--font-white);
+}

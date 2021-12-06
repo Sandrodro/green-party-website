@@ -1,15 +1,15 @@
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
-	box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 /*
@@ -18,20 +18,20 @@ a {
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 /*
   2. Remove default margin
 */
 * {
-	margin: 0;
+  margin: 0;
 }
 /*
   3. Allow percentage-based heights in the application
 */
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 /*
   Typographic tweaks!
@@ -39,8 +39,8 @@ body {
   5. Improve text rendering
 */
 body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 /*
   6. Improve media defaults
@@ -50,8 +50,8 @@ picture,
 video,
 canvas,
 svg {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 /*
   7. Remove built-in form typography styles
@@ -60,7 +60,7 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 /*
   8. Avoid text overflows
@@ -72,20 +72,25 @@ h3,
 h4,
 h5,
 h6 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 /*
   9. Create a root stacking context
 */
 #root,
 #__next {
-	isolation: isolate;
+  isolation: isolate;
 }
 
 body {
-	--main-green: #69a44a;
-	--dark-green: #37583d;
-	--main-yellow: #ffe600;
-	--font-dark: #707070;
-	--font-white: #707070;
+  --main-green: #69a44a;
+  --dark-green: #37583d;
+  --main-yellow: #ffe600;
+  --font-dark: #707070;
+  --font-white: #ffffff;
+}
+
+.container {
+  width: 1920px;
+  margin: 0 auto;
 }

@@ -1,0 +1,28 @@
+.figureContainer {
+  display: flex;
+  width: 414px;
+  flex-flow: column nowrap;
+  position: relative;
+  justify-content: center;
+}
+
+.figureContainer img {
+  border-radius: 20px;
+}
+
+.figCaption {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px;
+  opacity: 0.7;
+  background-color: #001219;
+  border-radius: 0 0 20px 20px;
+  letter-spacing: normal;
+  text-align: left;
+  color: white;
+  padding: 1rem;
+  align-self: center;
+  backdrop-filter: blur(8px);
+}

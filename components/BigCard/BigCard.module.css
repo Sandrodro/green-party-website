@@ -1,0 +1,22 @@
+.outer {
+  width: 673px;
+  height: 800px;
+  background-color: #69a44a;
+  border-radius: 50px 50px 20px 20px;
+  color: var(--font-white);
+  font-size: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.outer h2 {
+  margin-top: 25px;
+}
+
+.inner {
+  width: 673px;
+  height: 673px;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+}
