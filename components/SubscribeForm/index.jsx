@@ -1,8 +1,10 @@
 import styles from "./SubscribeForm.module.css";
 
-function SubscribeForm() {
+function SubscribeForm({ fullWidth }) {
   return (
-    <div className={styles.formContainer}>
+    <div
+      className={fullWidth ? styles.formContainerFull : styles.formContainer}
+    >
       <div className={styles.text}>
         <h1>გამოიწერე</h1>
         <h2>გაიგე პირველმა მწვანე სიახლეები</h2>
@@ -11,6 +13,7 @@ function SubscribeForm() {
         onSubmit={(e) => {
           e.preventDefault();
         }}
+        className={fullWidth ? styles.formFull : null}
       >
         <label htmlFor="name">
           <input type="text" placeholder="სახელი" id="name"></input>

@@ -1,0 +1,13 @@
+.circularCardContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.formContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 80px 0;
+}

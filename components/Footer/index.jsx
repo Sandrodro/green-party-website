@@ -8,7 +8,7 @@ import fbIcon from "../../public/fb_icon.svg";
 
 function Footer() {
   return (
-    <footer className={styles.footerContainer}>
+    <footer className={`${styles.footerContainer} container`}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.searchBar}>
           <label htmlFor="searchInput">
@@ -58,10 +58,10 @@ function Footer() {
             <Image src={greenIcon} width={122} height={122} />
           </div>
           <div className={styles.fourLogos}>
-            <Image src={fbIcon} width={24} height={24} />
-            <Image src={twitterIcon} width={24} height={24} />
-            <Image src={igIcon} width={24} height={24} />
-            <Image src={youtubeIcon} width={24} height={24} />
+            <Image src={fbIcon} width={24} height={24} alt="facebookLogo" />
+            <Image src={twitterIcon} width={24} height={24} alt="twitterLogo" />
+            <Image src={igIcon} width={24} height={24} alt="instagramLogo" />
+            <Image src={youtubeIcon} width={24} height={24} alt="youtubeLogo" />
           </div>
         </div>
       </div>

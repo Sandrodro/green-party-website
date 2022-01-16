@@ -1,11 +1,13 @@
 import styles from "./FinanceForm.module.css";
 
-function FinanceForm() {
+function FinanceForm({ fullWidth }) {
   return (
-    <div className={styles.formContainer}>
-      <div className={styles.inner}>
+    <div
+      className={fullWidth ? styles.formContainerFull : styles.formContainer}
+    >
+      <div className={fullWidth ? styles.innerFull : styles.inner}>
         <h1>დააფინანსე მწვანე პოლიტიკა</h1>
-        <form>
+        <form className={fullWidth ? styles.formFull : null}>
           <h2>
             თქვენი შემოწირულობა მოხმარდება ეკოლოგიური მდგომარეობის გაუმჯობესებას
           </h2>

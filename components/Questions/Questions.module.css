@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  width: 1365px;
+}
+
+.Collapsible {
+  opacity: 0.5;
+  border-radius: 10px;
+  background-color: rgba(112, 112, 112, 0.2);
+
+  cursor: pointer;
+  padding: 27px 60px;
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+}
