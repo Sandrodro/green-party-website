@@ -1,10 +1,16 @@
 import styles from "./NewsCard.module.css";
 import Image from "next/image";
 import testPicture from "../../public/test.jpg";
+import React from "react";
 
-function NewsCard({ title }) {
+const NewsCard = React.forwardRef(({ title, href, onClick }, ref) => {
   return (
-    <article className={styles.articleContainer}>
+    <article
+      className={styles.articleContainer}
+      href={href}
+      ref={ref}
+      onClick={onClick}
+    >
       <figure className={styles.figureContainer}>
         <Image
           layout={"fixed"}
@@ -20,6 +26,8 @@ function NewsCard({ title }) {
       <div className={styles.viewsAndDate}></div>
     </article>
   );
-}
+});
+
+NewsCard.displayName = "NewsCard";
 
 export default NewsCard;

@@ -1,5 +1,3 @@
-import HeroCard from "../components/HeroCard";
-import Image from "next/image";
 import { getAllData, getNewsArticles } from "../api";
 import NewsCard from "../components/NewsCard";
 import styles from "./index.module.css";
@@ -13,12 +11,13 @@ import circleMan from "../public/circleMan.svg";
 import circlePlant from "../public/circlePlant.svg";
 import circleGender from "../public/circleGender.svg";
 import FinanceForm from "../components/FinanceForm";
-import btnLeft from "../public/btnLeft.svg";
+import Header from "../components/Header";
+import Link from "next/link";
 
-function Home({ posts }) {
+function Home({ news }) {
   return (
     <main className="container">
-      <HeroCard />
+      <Header indexPage />
       <div className={styles.newsHeaderContainer}>
         <h1 className={styles.newsHeader}>სიახლეები</h1>
         <div>
@@ -31,8 +30,12 @@ function Home({ posts }) {
         </div>
       </div>
       <section className={styles.newsContainer}>
-        {[1, 2, 3, 4, 5, 6, 7].map((post) => {
-          return <NewsCard key={post} title={post} />;
+        {news.map((news) => {
+          return (
+            <Link href={`/news/${news.id}`} key={`link-${news.id}`} passHref>
+              <NewsCard key={news.id} title={news.title} />
+            </Link>
+          );
         })}
       </section>
       <section className={styles.bigCardContainer}>
@@ -71,10 +74,9 @@ function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getNewsArticles();
-  console.log("THESE ARE POSTS", posts.posts);
   return {
     props: {
-      posts: posts.posts,
+      news: posts.posts,
     },
   };
 }

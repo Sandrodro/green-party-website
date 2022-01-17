@@ -1,12 +1,12 @@
 import styles from "./platform.module.css";
-import HeaderCard from "../../components/HeaderCard";
 import SubscribeForm from "../../components/SubscribeForm";
 import FinanceForm from "../../components/FinanceForm";
+import Header from "../../components/Header";
 
 function Platform() {
   return (
     <main className="container">
-      <HeaderCard title="პლატფორმა" />
+      <Header title="პლატფორმა" />
       <p className={styles.paragraph}>
         ჩვენი ფართო ხედვა ასეთია: ეკოლოგიური, სოციალური და დემოკრატიული
         სახელმწიფო, რომელიც მუშაობს ყველასთვის და არა პრივილეგირებული

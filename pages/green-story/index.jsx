@@ -1,10 +1,10 @@
 import styles from "./green-story.module.css";
-import HeaderCard from "../../components/HeaderCard";
+import Header from "../../components/Header";
 
 function GreenStory() {
   return (
     <main className="container">
-      <HeaderCard title="მწვანე ამბავი" />
+      <Header title="მწვანე ამბავი" />
       <p className="para">
         Ზოგადი შინაარსი: აქ იქნება მწვანე პოლიტიკის ისტორია მოკლედ მოთხრობილი,
         ძირითადად საქართველოში: საიდან იწყებოდა, როგორ დიაწყო, პირველად

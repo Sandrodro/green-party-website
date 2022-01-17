@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function BigCard({ img, title }) {
   return (
-    <article>
+    <article className={styles.container}>
       <div className={styles.outer}>
         <div className={styles.inner}>
           <Image src={img} height={505} width={515} alt="cardImage" />

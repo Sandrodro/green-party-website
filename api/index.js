@@ -14,4 +14,11 @@ async function getNewsArticles() {
   return json;
 }
 
-export { getAllData, getNewsArticles };
+async function getSingleNewsArticle(id) {
+  const newsArticle = await fetch(`${ROUTES.SINGLE_NEWS_PAGE}${id}`);
+  const json = await newsArticle.json();
+  console.log("POST", json);
+  return json;
+}
+
+export { getAllData, getNewsArticles, getSingleNewsArticle };

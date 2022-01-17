@@ -1,11 +1,11 @@
 import styles from "./party.module.css";
-import HeaderCard from "../../components/HeaderCard";
 import SubscribeForm from "../../components/SubscribeForm";
+import Header from "../../components/Header";
 
 function Party() {
   return (
     <main className="container">
-      <HeaderCard title="პარტია" />
+      <Header title="პარტია" />
       <p className="para">
         მთავარი შინაარსი ასეთია: რატომ გვჭირდება მწვანე პოლიტიკური პარტია
         საქართველოში, სადაც უამრავი ეკოლოგიური და სოციალური პრობლემებია. როგორ
