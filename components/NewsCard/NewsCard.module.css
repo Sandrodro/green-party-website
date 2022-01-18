@@ -1,3 +1,7 @@
+.articleContainer {
+  cursor: pointer;
+}
+
 .figureContainer {
   display: flex;
   width: 414px;

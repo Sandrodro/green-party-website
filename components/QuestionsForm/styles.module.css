@@ -1,0 +1,96 @@
+.formContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 1365px;
+  gap: 30px;
+  margin: 20px auto;
+}
+
+.headline {
+  font-size: 54px;
+  color: #707070;
+  text-align: left;
+  width: 1034px;
+  margin: 0 auto;
+}
+
+.subHeadline {
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  width: 1034px;
+  margin: 0 auto;
+}
+
+.Collapsible {
+  border-radius: 10px;
+  background-color: rgba(112, 112, 112, 0.1);
+  color: #373737;
+  cursor: pointer;
+  padding: 27px 60px;
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.privateInfoContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.inputField {
+  width: 536px;
+  height: 80px;
+  border-radius: 20px;
+  border: 1px solid #606060;
+  color: #373737;
+  padding: 5px;
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+.choiceContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.choice {
+  width: 260px;
+  height: 80px;
+  border-radius: 20px;
+  border: 1px solid #707070;
+  background-color: white;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 26px;
+  padding-top: 15px;
+}
+
+.choice input {
+  border: none;
+  outline: none;
+  width: 80%;
+}
+
+.textAreaContainer {
+  margin: 20px 0;
+}
+
+.textArea {
+  width: 1088px;
+  height: 275px;
+  border-radius: 20px;
+  border: 1px solid #707070;
+  color: #606060;
+  font-size: 18px;
+  padding: 10px;
+}

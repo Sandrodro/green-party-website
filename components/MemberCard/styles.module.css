@@ -1,0 +1,62 @@
+.container {
+  height: 700px;
+  width: 475px;
+  overflow: hidden;
+  background-color: #bc8f89;
+  position: relative;
+  border-radius: 20px;
+}
+
+.textContainer {
+  width: 90%;
+  height: 92%;
+  position: absolute;
+  z-index: 97;
+  top: 4%;
+  left: 5%;
+}
+
+.container:hover .textContainer,
+.container:focus .textContainer {
+  border: 1px solid white;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.container:hover .image,
+.container:focus .image {
+  transform: scale(1.4) translateX(150px);
+}
+
+.text {
+  visibility: hidden;
+  font-size: 32px;
+  position: absolute;
+  z-index: 99;
+  top: 50px;
+  left: 30px;
+  color: white;
+}
+
+.positionText {
+  visibility: hidden;
+  font-size: 24px;
+  position: absolute;
+  z-index: 98;
+  top: 120px;
+  left: 30px;
+  color: white;
+}
+
+.container:hover .text,
+.container:focus .text,
+.container:hover .positionText,
+.container:focus .positionText {
+  visibility: visible;
+}

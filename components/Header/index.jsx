@@ -58,13 +58,20 @@ function Header({ title, indexPage, newsPage, headline }) {
               id="searchTop"
             />
           </label>
+          <Link href="/participate">
+            <button className={styles.participateButton}>გააქტიურდი</button>
+          </Link>
         </div>
       </header>
       <h1 className={styles.headline}>
         {indexPage ? "შექმენი მწვანე წესრიგი" : title}
         {newsPage ? <h1 className={styles.newsHeadline}>{headline}</h1> : null}
       </h1>
-      {indexPage ? <button className={styles.button}>გააქტიურდი</button> : null}
+      {indexPage ? (
+        <Link href="/participate">
+          <button className={styles.button}>გააქტიურდი</button>
+        </Link>
+      ) : null}
     </article>
   );
 }
