@@ -17,7 +17,7 @@ function Contact() {
             width="812"
             height="618"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
             className={styles.map}
           ></iframe>
