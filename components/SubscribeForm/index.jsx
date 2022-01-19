@@ -13,7 +13,7 @@ function SubscribeForm({ fullWidth }) {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-        className={fullWidth ? styles.formFull : null}
+        className={fullWidth ? styles.formFull : styles.form}
       >
         <label htmlFor="name">
           <input type="text" placeholder="სახელი" id="name"></input>
@@ -31,7 +31,14 @@ function SubscribeForm({ fullWidth }) {
         <label htmlFor="email">
           <input type="text" placeholder="E-mail" id="email"></input>
         </label>
-        <button className={styles.subscribeButton}>გამოიწერე</button>
+        <button
+          className={styles.subscribeButton}
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
+          გამოიწერე
+        </button>
       </form>
     </div>
   );

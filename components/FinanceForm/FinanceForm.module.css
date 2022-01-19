@@ -15,7 +15,7 @@
   background-image: url("../../public/test-payment.jpg");
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 20px;
 }
@@ -29,7 +29,8 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-around;
-  margin: 80px 0;
+  margin: 0;
+  margin-top: 80px;
 }
 
 .formFull {
@@ -58,7 +59,8 @@
   line-height: 1.4;
   text-align: center;
   margin-top: 155px;
-  margin-bottom: 0;
+  margin-bottom: 80px;
+  color: white;
 }
 
 .inner form {
@@ -86,17 +88,35 @@
   gap: 20px;
   width: 121px;
   height: 50px;
-  margin: 55px 16px 72px;
+  margin: 0px 16px 72px;
   padding: 11px 37px 10px 38px;
+  cursor: pointer;
 }
 
 .inputs input {
   width: 200px;
   height: 50px;
-  margin: 55px 5px 72px 16px;
-  padding: 15px 60px;
+  margin: 0 5px 0 16px;
+  padding: 15px 30px;
   border-radius: 15px;
   border: solid 1px #707070;
+  font-size: 20px;
+}
+
+.formFull .inputs input,
+.formFull .inputs button {
+  margin: 40px 5px 40px 16px;
+}
+
+.inputs input::-webkit-outer-spin-button,
+.inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.inputs input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .payButton {
@@ -106,4 +126,20 @@
   border-radius: 20px;
   background-color: #69a44a;
   color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.payButton:hover {
+  transform: scale(1.06);
+}
+
+.inputs .activeButton {
+  background-color: white;
+  border: 1px solid #69a44a;
+}
+.form h2 {
+  text-align: center;
 }

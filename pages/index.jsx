@@ -13,31 +13,60 @@ import circleGender from "../public/circleGender.svg";
 import FinanceForm from "../components/FinanceForm";
 import Header from "../components/Header";
 import Link from "next/link";
+import Image from "next/image";
+import btnRight from "../public/btnRight.svg";
+import { useState } from "react";
 
 function Home({ news }) {
+  const [articleNumber, setArticleNumber] = useState(4);
+
   return (
     <main className="container">
       <Header indexPage />
       <div className={styles.newsHeaderContainer}>
         <h1 className={styles.newsHeader}>სიახლეები</h1>
         <div>
-          <button className={styles.newsButton}>
-            <span>{`<`}</span>
+          <button
+            disabled={articleNumber == 4 ? true : false}
+            className={
+              articleNumber == 4
+                ? `${styles.buttonDisabled} ${styles.newsButton}`
+                : styles.newsButton
+            }
+            onClick={() => setArticleNumber((number) => number - 4)}
+          >
+            <Image
+              src={btnRight}
+              width={24}
+              height={24}
+              className={styles.leftIcon}
+            />
           </button>
-          <button className={styles.newsButton}>
-            <span>{`>`}</span>
+          <button
+            disabled={news.length <= articleNumber ? true : false}
+            className={
+              news.length <= articleNumber
+                ? `${styles.buttonDisabled} ${styles.newsButton}`
+                : styles.newsButton
+            }
+            onClick={() => setArticleNumber((number) => number + 4)}
+          >
+            <Image src={btnRight} width={24} height={24} />
           </button>
         </div>
       </div>
       <section className={styles.newsContainer}>
-        {news.map((news) => {
-          return (
-            <Link href={`/news/${news.id}`} key={`link-${news.id}`} passHref>
-              <NewsCard key={news.id} title={news.title} />
-            </Link>
-          );
+        {news.map((news, index) => {
+          if (index >= articleNumber - 4 && index < articleNumber) {
+            return (
+              <Link href={`/news/${news.id}`} key={`link-${news.id}`} passHref>
+                <NewsCard key={news.id} title={news.title} />
+              </Link>
+            );
+          }
         })}
       </section>
+      <h1 className={styles.newsHeader}>რა შეგიძლია შენ?</h1>
       <section className={styles.bigCardContainer}>
         <BigCard img={piggyImg} title="დააფინანსე მწვანე პოლიტიკა" />
         <BigCard
@@ -76,8 +105,9 @@ export async function getStaticProps() {
   const posts = await getNewsArticles();
   return {
     props: {
-      news: posts.posts,
+      news: posts.posts.reverse(),
     },
+    revalidate: 1,
   };
 }
 

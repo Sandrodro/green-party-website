@@ -5,6 +5,8 @@ import igIcon from "../../public/ig_icon.svg";
 import twitterIcon from "../../public/twitter_icon.svg";
 import youtubeIcon from "../../public/youtube_icon.svg";
 import fbIcon from "../../public/fb_icon.svg";
+import arrow from "../../public/arrowStraight.svg";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -19,33 +21,56 @@ function Footer() {
               className={styles.searchInput}
             ></input>
           </label>
+          <button className={styles.searchButton}>
+            <Image src={arrow} width={34} height={34} />
+          </button>
         </div>
         <div className={styles.links}>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
-              <strong>მთავარი</strong>
+              <strong>
+                <Link href="/">მთავარი</Link>
+              </strong>
             </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
-              <strong>მწვანეები</strong>
+              <strong>
+                <Link href="/platform">მწვანეები</Link>
+              </strong>
             </li>
-            <li>პლატფორმა</li>
-            <li>მწვანე ამბავი</li>
-            <li>პარტია</li>
-            <li>ჩვენი გუნდი</li>
+            <li>
+              <Link href="/platform">პლატფორმა</Link>
+            </li>
+            <li>
+              <Link href="/green-story">მწვანე ამბავი</Link>
+            </li>
+            <li>
+              <Link href="/party">პარტია</Link>
+            </li>
+            <li>
+              <Link href="/our-team">ჩვენი გუნდი</Link>
+            </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
-              <strong>რა შეგიძლია შენ</strong>
+              <strong>
+                <Link href="/what-you-can-do">რა შეგიძლია შენ</Link>
+              </strong>
             </li>
-            <li>F.A.Q</li>
+            <li>
+              <Link href="/participate">F.A.Q</Link>
+            </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
-              <strong>კონტაქტი</strong>
+              <strong>
+                <Link href="/contact">კონტაქტი</Link>
+              </strong>
             </li>
-            <li>მედიისათვის</li>
+            <li>
+              <Link href="/contact">მედიისათვის</Link>
+            </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>

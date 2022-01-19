@@ -1,0 +1,78 @@
+.flexContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: start;
+  justify-content: space-around;
+  margin: 80px 0;
+}
+
+.privateInfoContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.inputField {
+  width: 322px;
+  height: 80px;
+  border-radius: 20px;
+  border: 1px solid #606060;
+  color: #373737;
+  padding: 5px;
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+.textAreaContainer {
+  margin: 20px 0;
+}
+
+.textArea {
+  width: 674px;
+  height: 275px;
+  border-radius: 20px;
+  border: 1px solid #707070;
+  color: #606060;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.formContainer {
+  width: 50%;
+}
+
+.formContainer h2 {
+  color: #707070;
+  font-size: 24px;
+}
+
+.map {
+  border-radius: 20px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.socialMedia {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 25px;
+}
+
+.infoContainer ul {
+  list-style: none;
+  color: #707070;
+  font-size: 16px;
+}
+
+.info li {
+  margin: 20px 0;
+}

@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.searchBar {
+  position: relative;
+}
+
 .searchInput {
   width: 540px;
   height: 80px;
@@ -20,6 +24,20 @@
   border-radius: 20px;
   border: none;
   outline: none;
+  margin-left: 50px;
+}
+
+.searchButton {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #69a44a;
+  color: white;
+  position: absolute;
+  right: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .links {

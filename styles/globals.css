@@ -82,12 +82,27 @@ h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "FiraGo Regular";
+  src: url(/public/fonts/FiraGO-Regular.woff2);
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraGo Bold";
+  src: url(/public/fonts/FiraGO-Bold.woff2);
+  font-weight: 700;
+  font-display: swap;
+}
+
 body {
   --main-green: #69a44a;
   --dark-green: #37583d;
   --main-yellow: #ffe600;
   --font-dark: #707070;
   --font-white: #ffffff;
+  font-family: "FiraGo Regular";
 }
 
 .container {
@@ -112,4 +127,8 @@ body {
   width: 1088px;
   font-size: 40px;
   line-height: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
 }

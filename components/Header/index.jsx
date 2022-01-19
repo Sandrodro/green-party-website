@@ -1,11 +1,15 @@
 import styles from "./Header.module.css";
 import greenPartyIcon from "../../public/green_party_icon.svg";
 import Image from "next/dist/client/image";
-import downArrow from "../../public/downArrow.svg";
 import Link from "next/link";
 import Collapsible from "react-collapsible";
+import { useRouter } from "next/router";
+import downArrow from "../../public/downArrow.svg";
+import ArrowRight from "../../public/arrowRight.svg";
 
 function Header({ title, indexPage, newsPage, headline }) {
+  const router = useRouter();
+
   return (
     <article className={`container ${styles.mainContainer}`}>
       <header className={`container ${styles.headerContainer}`}>
@@ -16,11 +20,19 @@ function Header({ title, indexPage, newsPage, headline }) {
             </Link>
           </div>
           <ul className={styles.linkList}>
-            <li>
+            <li className={router.pathname == "/" ? styles.activeLink : null}>
               <Link href="/">მთავარი</Link>
             </li>
             <Collapsible
               trigger="მწვანეები"
+              className={
+                router.pathname == "/platform" ||
+                router.pathname == "/green-story" ||
+                router.pathname == "/party" ||
+                router.pathname == "/our-team"
+                  ? styles.activeLink
+                  : null
+              }
               contentContainerTagName="li"
               triggerTagName="a"
               contentInnerClassName={styles.contentInner}
@@ -45,10 +57,21 @@ function Header({ title, indexPage, newsPage, headline }) {
                 </li>
               </ul>
             </Collapsible>
-            <li>
-              <Link href="what-you-can-do">რა შეგიძლია შენ</Link>
+            <Image src={downArrow} width={16} height={16} />
+            <li
+              className={
+                router.pathname == "/what-you-can-do" ? styles.activeLink : null
+              }
+            >
+              <Link href="/what-you-can-do">რა შეგიძლია შენ</Link>
             </li>
-            <li>კონტაქტი </li>
+            <li
+              className={
+                router.pathname == "/contact" ? styles.activeLink : null
+              }
+            >
+              <Link href="/contact">კონტაქტი</Link>
+            </li>
           </ul>
           <label htmlFor="searchTop">
             <input
@@ -69,7 +92,9 @@ function Header({ title, indexPage, newsPage, headline }) {
       </h1>
       {indexPage ? (
         <Link href="/participate">
-          <button className={styles.button}>გააქტიურდი</button>
+          <button className={styles.button}>
+            გააქტიურდი <Image src={ArrowRight} width={24} height={24} />
+          </button>
         </Link>
       ) : null}
     </article>

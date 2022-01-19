@@ -1,8 +1,10 @@
 .newsContainer {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  gap: 140px;
-  margin: 80px 0;
+  gap: 50px;
+  margin: 80px auto;
+  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -35,9 +37,9 @@
 }
 
 .newsHeader {
-  width: 233px;
-  height: 53px;
-  margin: 80px 0px;
+  width: max-content;
+  height: 70px;
+  margin: 60px 0px;
   font-size: 40px;
   font-weight: 600;
   font-stretch: normal;
@@ -46,15 +48,31 @@
   letter-spacing: normal;
   text-align: left;
   color: #707070;
+  padding-bottom: 14px;
+  border-bottom: 3px solid #69a44a;
 }
 
 .newsButton {
   width: 60px;
+  border: none;
+  outline: none;
   height: 60px;
   padding: 18px;
-  opacity: 0.2;
   border-radius: 20px;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
-  background-color: #69a44a;
+  background-color: rgba(105, 164, 74, 0.2);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   margin-right: 80px;
+  cursor: pointer;
+}
+
+.newsButton:hover {
+  background-color: rgba(50, 116, 15, 0.4);
+}
+
+.leftIcon {
+  transform: rotate(180deg);
+}
+
+.buttonDisabled {
+  opacity: 0.3;
 }

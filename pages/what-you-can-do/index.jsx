@@ -2,7 +2,6 @@ import styles from "./what-you-can-do.module.css";
 import CircularCard from "../../components/CircularCard";
 import fbCircular from "../../public/fbCircular.svg";
 import puzzleCircular from "../../public/puzzleCircular.svg";
-import redCircular from "../../public/redCircular.svg";
 import blueCircular from "../../public/blueCircular.svg";
 import FinanceForm from "../../components/FinanceForm";
 import SubscribeForm from "../../components/SubscribeForm";
@@ -26,7 +25,7 @@ function WhatYouCanDo() {
           image={puzzleCircular}
           text="მიიღე მონაწილეობა მწვანე პლატფორმის შექმნაში"
         />
-        <CircularCard image={redCircular} text="გახდი წევრი" />
+        <CircularCard image={blueCircular} text="გახდი წევრი" />
         <CircularCard
           image={blueCircular}
           text="გახდი ინფორმაციის გამავრცელებელი - გამოგვყევი სოციალურ ქსელბში"

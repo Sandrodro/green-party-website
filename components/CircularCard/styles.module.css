@@ -7,6 +7,12 @@
   padding: 60px 10px 40px;
   border-radius: 20px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  transition: all 0.5s;
+}
+
+.container:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
 }
 
 .paragraph {

@@ -3,7 +3,10 @@ import Image from "next/image";
 
 function BigCard({ img, title }) {
   return (
-    <article className={styles.container}>
+    <article
+      className={styles.container}
+      onClick={() => window.scrollBy(0, 2400)}
+    >
       <div className={styles.outer}>
         <div className={styles.inner}>
           <Image src={img} height={505} width={515} alt="cardImage" />
