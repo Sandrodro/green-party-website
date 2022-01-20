@@ -7,6 +7,28 @@ import { useRouter } from "next/router";
 import downArrow from "../../public/downArrow.svg";
 import ArrowRight from "../../public/arrowRight.svg";
 
+function CollapsibleTrigger({ title }) {
+  const router = useRouter();
+
+  return (
+    <>
+      <a
+        className={
+          router.pathname == "/platform" ||
+          router.pathname == "/green-story" ||
+          router.pathname == "/party" ||
+          router.pathname == "/our-team"
+            ? styles.activeLink
+            : null
+        }
+      >
+        მწვანეები
+      </a>
+      <Image src={downArrow} width={16} height={16} />
+    </>
+  );
+}
+
 function Header({ title, indexPage, newsPage, headline }) {
   const router = useRouter();
 
@@ -24,23 +46,14 @@ function Header({ title, indexPage, newsPage, headline }) {
               <Link href="/">მთავარი</Link>
             </li>
             <Collapsible
-              trigger="მწვანეები"
-              className={
-                router.pathname == "/platform" ||
-                router.pathname == "/green-story" ||
-                router.pathname == "/party" ||
-                router.pathname == "/our-team"
-                  ? styles.activeLink
-                  : null
-              }
+              trigger={<CollapsibleTrigger title="მწვანეები" />}
               contentContainerTagName="li"
-              triggerTagName="a"
               contentInnerClassName={styles.contentInner}
               classParentString={styles.collapsible}
               openedClassName={styles.collapsibleOpen}
               contentHiddenWhenClosed
               triggerClassName={styles.collapsibleTrigger}
-              triggerOpenedClassName={styles.collapsibleTrigger}
+              triggerOpenedClassName={styles.collapsibleClosedTrigger}
             >
               <ul>
                 <li>
@@ -57,7 +70,6 @@ function Header({ title, indexPage, newsPage, headline }) {
                 </li>
               </ul>
             </Collapsible>
-            <Image src={downArrow} width={16} height={16} />
             <li
               className={
                 router.pathname == "/what-you-can-do" ? styles.activeLink : null

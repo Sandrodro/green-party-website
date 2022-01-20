@@ -31,7 +31,7 @@ export async function getStaticProps({ params }) {
   const res = await getSingleNewsArticle(params.slug);
   return {
     props: { post: res },
-    revalidate: 1,
+    revalidate: 10,
   };
 }
 

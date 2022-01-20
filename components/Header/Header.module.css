@@ -41,6 +41,12 @@
   text-align: center;
 }
 
+.collapsible span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .contentInner {
   display: flex;
   flex-flow: column nowrap;
@@ -54,6 +60,7 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: space-evenly;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -61,8 +68,31 @@
   padding: 15px;
 }
 
+.contentInner li {
+  width: 130px;
+  height: 23px;
+}
+
+.contentInner li:hover {
+  background-color: #69a44a;
+  border-radius: 15px;
+}
+
 .collapsibleTrigger {
   cursor: pointer;
+}
+
+.collapsibleClosedTrigger {
+  cursor: pointer;
+}
+
+.collapsibleTrigger img,
+.collapsibleClosedTrigger img {
+  transition: all 0.4s;
+}
+
+.collapsibleClosedTrigger img {
+  transform: rotate(180deg);
 }
 
 .mainContainer {
