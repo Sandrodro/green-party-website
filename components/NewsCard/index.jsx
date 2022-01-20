@@ -17,7 +17,7 @@ const NewsCard = React.forwardRef(({ title, href, onClick }, ref) => {
           src={testPicture}
           width={414}
           height={600}
-          alt="newsImage"
+          alt="news Image"
         />
         <figcaption className={styles.figCaption}>
           <h2>{title}</h2>

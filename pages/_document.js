@@ -17,6 +17,7 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <meta name="description" content="საქართველოს მწვანე პარტია"></meta>
         </Head>
         <body>
           <Main />

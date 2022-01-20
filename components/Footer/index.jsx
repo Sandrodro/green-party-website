@@ -22,7 +22,7 @@ function Footer() {
             ></input>
           </label>
           <button className={styles.searchButton}>
-            <Image src={arrow} width={34} height={34} />
+            <Image src={arrow} width={34} height={34} alt="button" />
           </button>
         </div>
         <div className={styles.links}>
@@ -85,10 +85,20 @@ function Footer() {
             <Image src={greenIcon} width={122} height={122} />
           </div>
           <div className={styles.fourLogos}>
-            <Image src={fbIcon} width={24} height={24} alt="facebookLogo" />
-            <Image src={twitterIcon} width={24} height={24} alt="twitterLogo" />
-            <Image src={igIcon} width={24} height={24} alt="instagramLogo" />
-            <Image src={youtubeIcon} width={24} height={24} alt="youtubeLogo" />
+            <Image src={fbIcon} width={24} height={24} alt="facebook Logo" />
+            <Image
+              src={twitterIcon}
+              width={24}
+              height={24}
+              alt="twitter Logo"
+            />
+            <Image src={igIcon} width={24} height={24} alt="instagram Logo" />
+            <Image
+              src={youtubeIcon}
+              width={24}
+              height={24}
+              alt="youtube Logo"
+            />
           </div>
         </div>
       </div>

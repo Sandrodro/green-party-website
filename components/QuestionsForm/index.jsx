@@ -9,7 +9,7 @@ function CollapsibleTrigger({ title }) {
     <>
       <span>{title}</span>
       <span className={styles.arrow}>
-        <Image src={downArrow} height={24} width={24} />
+        <Image src={downArrow} height={24} width={24} alt="" />
       </span>
     </>
   );
@@ -26,14 +26,14 @@ function QuestionsForm() {
       <h1 className={styles.headline}>წევრობის მსურველის განაცხადი</h1>
       <p className={styles.subHeadline}>
         <span>
-          <Image src={star} width={24} height={24} />
+          <Image src={star} width={24} height={24} alt="" />
         </span>
         აპლიკაციის შევსებამდე გაეცანით ჩვენს წესდებას , შინაგანაწესსა და
         პოლიტიკურ პლატფორმას
       </p>
       <p className={styles.subHeadline}>
         <span>
-          <Image src={star} width={24} height={24} />
+          <Image src={star} width={24} height={24} alt="" />
         </span>
         სიმბოლოთი აღნიშნული ველების შევსება სავალდებულოა
       </p>

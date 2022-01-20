@@ -24,7 +24,7 @@ function CollapsibleTrigger({ title }) {
       >
         მწვანეები
       </a>
-      <Image src={downArrow} width={16} height={16} />
+      <Image src={downArrow} width={16} height={16} alt="dropdown button" />
     </>
   );
 }
@@ -38,7 +38,12 @@ function Header({ title, indexPage, newsPage, headline }) {
         <div className={styles.top}>
           <div className={styles.icon}>
             <Link href="/">
-              <Image src={greenPartyIcon} width={60} height={60} />
+              <Image
+                src={greenPartyIcon}
+                width={60}
+                height={60}
+                alt="green party icon"
+              />
             </Link>
           </div>
           <ul className={styles.linkList}>
@@ -105,7 +110,13 @@ function Header({ title, indexPage, newsPage, headline }) {
       {indexPage ? (
         <Link href="/participate">
           <button className={styles.button}>
-            გააქტიურდი <Image src={ArrowRight} width={24} height={24} />
+            გააქტიურდი{" "}
+            <Image
+              src={ArrowRight}
+              width={24}
+              height={24}
+              alt="participate button"
+            />
           </button>
         </Link>
       ) : null}

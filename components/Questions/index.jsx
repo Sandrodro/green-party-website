@@ -8,7 +8,7 @@ function CollapsibleTrigger({ title }) {
     <>
       <span>{title}</span>
       <span className={styles.arrow}>
-        <Image src={downArrow} height={24} width={24} />
+        <Image src={downArrow} height={24} width={24} alt="" />
       </span>
     </>
   );

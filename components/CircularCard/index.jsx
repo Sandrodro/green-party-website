@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 function CircularCard({ image, text }) {
   return (
     <section className={styles.container}>
-      <Image src={image} width={300} height={300} />
+      <Image src={image} width={300} height={300} alt="circular image" />
       <p className={styles.paragraph}>{text}</p>
     </section>
   );

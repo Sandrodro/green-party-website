@@ -27,30 +27,50 @@ function Contact() {
           <div className={styles.infoContainer}>
             <ul className={styles.info}>
               <li className={styles.contactLi}>
-                <Image src={phoneIcon} width={24} height={24} />
+                <Image
+                  src={phoneIcon}
+                  width={24}
+                  height={24}
+                  alt="phone number"
+                />
                 <p>571 52 56 58</p>
               </li>
               <li className={styles.contactLi}>
-                <Image src={mailIcon} width={24} height={24} />
+                <Image src={mailIcon} width={24} height={24} alt="address" />
                 <p>თბილისი, ი.მაჩაბლის 17</p>
               </li>
               <li className={styles.contactLi}>
-                <Image src={phoneIcon} width={24} height={24} />
+                <Image src={phoneIcon} width={24} height={24} alt="email" />
                 <p>info@younggreens.ge</p>
               </li>
             </ul>
             <ul className={styles.socialMedia}>
               <li>
-                <Image src={fbIcon} width={40} height={40} />
+                <Image
+                  src={fbIcon}
+                  width={40}
+                  height={40}
+                  alt="facebook icon"
+                />
               </li>
               <li>
-                <Image src={twitterIcon} width={40} height={40} />
+                <Image
+                  src={twitterIcon}
+                  width={40}
+                  height={40}
+                  alt="twitter icon"
+                />
               </li>
               <li>
-                <Image src={igIcon} width={40} height={40} />
+                <Image
+                  src={igIcon}
+                  width={40}
+                  height={40}
+                  alt="instagram icon"
+                />
               </li>
               <li>
-                <Image src={ytIcon} width={40} height={40} />
+                <Image src={ytIcon} width={40} height={40} alt="youtube icon" />
               </li>
             </ul>
           </div>
