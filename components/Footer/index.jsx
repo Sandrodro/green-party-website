@@ -29,53 +29,75 @@ function Footer() {
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
               <strong>
-                <Link href="/">მთავარი</Link>
+                <Link href="/" passHref>
+                  მთავარი
+                </Link>
               </strong>
             </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
               <strong>
-                <Link href="/platform">მწვანეები</Link>
+                <Link href="/platform" passHref>
+                  მწვანეები
+                </Link>
               </strong>
             </li>
             <li>
-              <Link href="/platform">პლატფორმა</Link>
+              <Link href="/platform" passHref>
+                პლატფორმა
+              </Link>
             </li>
             <li>
-              <Link href="/green-story">მწვანე ამბავი</Link>
+              <Link href="/green-story" passHref>
+                მწვანე ამბავი
+              </Link>
             </li>
             <li>
-              <Link href="/party">პარტია</Link>
+              <Link href="/party" passHref>
+                პარტია
+              </Link>
             </li>
             <li>
-              <Link href="/our-team">ჩვენი გუნდი</Link>
+              <Link href="/our-team" passHref>
+                ჩვენი გუნდი
+              </Link>
             </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
               <strong>
-                <Link href="/what-you-can-do">რა შეგიძლია შენ</Link>
+                <Link href="/what-you-can-do" passHref>
+                  რა შეგიძლია შენ
+                </Link>
               </strong>
             </li>
             <li>
-              <Link href="/participate">F.A.Q</Link>
+              <Link href="/participate" passHref>
+                F.A.Q
+              </Link>
             </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
               <strong>
-                <Link href="/contact">კონტაქტი</Link>
+                <Link href="/contact" passHref>
+                  კონტაქტი
+                </Link>
               </strong>
             </li>
             <li>
-              <Link href="/contact">მედიისათვის</Link>
+              <Link href="/contact" passHref>
+                მედიისათვის
+              </Link>
             </li>
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
               <strong>
-                <Link href="/participate">გააქტიურდი</Link>
+                <Link href="/participate" passHref>
+                  გააქტიურდი
+                </Link>
               </strong>
             </li>
           </ul>

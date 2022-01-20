@@ -6,7 +6,6 @@ import igIcon from "../../public/ig_grey.svg";
 import ytIcon from "../../public/yt_grey.svg";
 import Image from "next/image";
 import mailIcon from "../../public/mailIcon.svg";
-import locationIcon from "../../public/locationIcon.svg";
 import phoneIcon from "../../public/phoneIcon.svg";
 
 function Contact() {

@@ -37,7 +37,7 @@ function Header({ title, indexPage, newsPage, headline }) {
       <header className={`container ${styles.headerContainer}`}>
         <div className={styles.top}>
           <div className={styles.icon}>
-            <Link href="/">
+            <Link href="/" passHref>
               <Image
                 src={greenPartyIcon}
                 width={60}
@@ -48,7 +48,9 @@ function Header({ title, indexPage, newsPage, headline }) {
           </div>
           <ul className={styles.linkList}>
             <li className={router.pathname == "/" ? styles.activeLink : null}>
-              <Link href="/">მთავარი</Link>
+              <Link href="/" passHref>
+                მთავარი
+              </Link>
             </li>
             <Collapsible
               trigger={<CollapsibleTrigger title="მწვანეები" />}
@@ -62,16 +64,24 @@ function Header({ title, indexPage, newsPage, headline }) {
             >
               <ul>
                 <li>
-                  <Link href="/platform">პლატფორმა</Link>
+                  <Link href="/platform" passHref>
+                    პლატფორმა
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/green-story">მწვანე ამბავი</Link>
+                  <Link href="/green-story" passHref>
+                    მწვანე ამბავი
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/party">პარტია</Link>
+                  <Link href="/party" passHref>
+                    პარტია
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/our-team">ჩვენი გუნდი</Link>
+                  <Link href="/our-team" passHref>
+                    ჩვენი გუნდი
+                  </Link>
                 </li>
               </ul>
             </Collapsible>
@@ -80,14 +90,18 @@ function Header({ title, indexPage, newsPage, headline }) {
                 router.pathname == "/what-you-can-do" ? styles.activeLink : null
               }
             >
-              <Link href="/what-you-can-do">რა შეგიძლია შენ</Link>
+              <Link href="/what-you-can-do" passHref>
+                რა შეგიძლია შენ
+              </Link>
             </li>
             <li
               className={
                 router.pathname == "/contact" ? styles.activeLink : null
               }
             >
-              <Link href="/contact">კონტაქტი</Link>
+              <Link href="/contact" passHref>
+                კონტაქტი
+              </Link>
             </li>
           </ul>
           <label htmlFor="searchTop">
@@ -98,7 +112,7 @@ function Header({ title, indexPage, newsPage, headline }) {
               id="searchTop"
             />
           </label>
-          <Link href="/participate">
+          <Link href="/participate" passHref>
             <button className={styles.participateButton}>გააქტიურდი</button>
           </Link>
         </div>
@@ -108,7 +122,7 @@ function Header({ title, indexPage, newsPage, headline }) {
         {newsPage ? <h1 className={styles.newsHeadline}>{headline}</h1> : null}
       </h1>
       {indexPage ? (
-        <Link href="/participate">
+        <Link href="/participate" passHref>
           <button className={styles.button}>
             გააქტიურდი{" "}
             <Image

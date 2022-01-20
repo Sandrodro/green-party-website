@@ -107,7 +107,7 @@ export async function getStaticProps() {
     props: {
       news: posts.posts.reverse(),
     },
-    revalidate: 1,
+    revalidate: 10,
   };
 }
 

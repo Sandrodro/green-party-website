@@ -3,7 +3,6 @@ import SubscribeForm from "../../components/SubscribeForm";
 import FinanceForm from "../../components/FinanceForm";
 import Header from "../../components/Header";
 import MemberCard from "../../components/MemberCard";
-import image from "../../public/portrait.jpg";
 
 function Platform() {
   return (
