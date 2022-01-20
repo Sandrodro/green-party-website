@@ -8,7 +8,7 @@ function News({ post }) {
     <main className="container">
       <Header newsPage headline={post.title} />
       <div
-        className="para"
+        className={`para ${styles.paragraph}`}
         dangerouslySetInnerHTML={{ __html: post.content[0].value }}
       ></div>
     </main>

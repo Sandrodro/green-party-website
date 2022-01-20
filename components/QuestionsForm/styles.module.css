@@ -22,6 +22,10 @@
   margin: 0 auto;
 }
 
+.subHeadline span {
+  margin-right: 10px;
+}
+
 .Collapsible {
   border-radius: 10px;
   background-color: rgba(112, 112, 112, 0.1);
@@ -93,4 +97,45 @@
   color: #606060;
   font-size: 18px;
   padding: 10px;
+}
+
+.triggerClosed {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.triggerOpened {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.triggerClosed .arrow,
+.triggerOpened .arrow {
+  transition: all 0.4s;
+}
+
+.triggerOpened .arrow {
+  transform: rotate(180deg);
+}
+
+.payButton {
+  width: 260px;
+  height: 60px;
+  padding: 18px 83px;
+  border-radius: 20px;
+  background-color: #69a44a;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-left: 500px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.payButton:hover {
+  transform: scale(1.06);
 }

@@ -74,7 +74,9 @@ function Footer() {
           </ul>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
-              <strong>გააქტიურდი</strong>
+              <strong>
+                <Link href="/participate">გააქტიურდი</Link>
+              </strong>
             </li>
           </ul>
         </div>

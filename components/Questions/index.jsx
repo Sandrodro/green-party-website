@@ -1,5 +1,18 @@
 import styles from "./Questions.module.css";
 import Collapsible from "react-collapsible";
+import Image from "next/image";
+import downArrow from "../../public/downArrowForm.svg";
+
+function CollapsibleTrigger({ title }) {
+  return (
+    <>
+      <span>{title}</span>
+      <span className={styles.arrow}>
+        <Image src={downArrow} height={24} width={24} />
+      </span>
+    </>
+  );
+}
 
 function Questions({ form }) {
   return (
@@ -12,8 +25,9 @@ function Questions({ form }) {
       <h1 className={styles.headline}>ხშირად დასმული კითხვები</h1>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="როგორ გავხდე წევრი?"
-        triggerTagName="div"
+        trigger={<CollapsibleTrigger title="როგორ გავხდე წევრი?" />}
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           შეავსე ზემოთ მოცემული აპლიკაცია, ყურადღება მიაქციე რომ ყველა
@@ -23,8 +37,11 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="რამდენი წლის უნდა ვიყო, რომ წევრი გავხდე?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="რამდენი წლის უნდა ვიყო, რომ წევრი გავხდე?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           ჩვენ არ გვაქვს არანაირი ასაკობრივი შეზღუდვა, ყველა ასაკის ადამიანის
@@ -34,8 +51,11 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="არ ვცხოვრობ თბილისში, მაინც შემიძლია წევრი გავხდე?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="არ ვცხოვრობ თბილისში, მაინც შემიძლია წევრი გავხდე?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           დიახ! მწვანეები მთელ საქართველოში ვართ და დეცენტრალიზაცია ჩვენი
@@ -48,8 +68,9 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="საწევრო გადასახადი რამდენია?"
-        triggerTagName="div"
+        trigger={<CollapsibleTrigger title="საწევრო გადასახადი რამდენია?" />}
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           მწვანეების წევრობის საწევრო გადასახადი არის 10 ლარი წელიწადში, რომელიც
@@ -59,8 +80,11 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="არ მაქვს ყველა აქტივობაში ჩართვისთვის საკმარისი დრო, მაინც ღირს წევრობა?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="არ მაქვს ყველა აქტივობაში ჩართვისთვის საკმარისი დრო, მაინც ღირს წევრობა?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           აუცილებლად! მწვანეების წევრობა არ გულისხმობს ორგანიზაციის ყველა
@@ -72,8 +96,11 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="რომელი მუნიციპალური ორგანიზაცია უნდა ავირჩიო?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="რომელი მუნიციპალური ორგანიზაცია უნდა ავირჩიო?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           სასურველია ის ადგილი აარჩიო, სადაც უფრო ხშირად ხარ, თუმცა ამას
@@ -82,15 +109,21 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="საქართველოში არ ვცხოვრობ, მაინც შემიძლია წევრი გავხდე?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="საქართველოში არ ვცხოვრობ, მაინც შემიძლია წევრი გავხდე?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>ესეც შესაძლებელია; მთავარია შენი სურვილი და ჩართულობა.</p>
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="ვარ სხვა პარტიის წევრი, შემიძლია მწვანეების წევრიც გავხდე?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="ვარ სხვა პარტიის წევრი, შემიძლია მწვანეების წევრიც გავხდე?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           არა, თუ მწვანეობა გსურთ უნდა მიიღოთ გადაწყვეტილება გინდათ იყო მწვანე
@@ -99,8 +132,11 @@ function Questions({ form }) {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="ვიზიარებ თქვენს იდეებს, მაგრამ წევრობა ჯერ არ გადამიწყვიტავს, როგორ მოვიქცე?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="ვიზიარებ თქვენს იდეებს, მაგრამ წევრობა ჯერ არ გადამიწყვიტავს, როგორ მოვიქცე?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <p>
           წევრობა ყველაზე კარგია, მაგრამ სხვა გზებიც არსებობს მწვანე პოლიტიკის

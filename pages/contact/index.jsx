@@ -5,6 +5,9 @@ import twitterIcon from "../../public/twitter_grey.svg";
 import igIcon from "../../public/ig_grey.svg";
 import ytIcon from "../../public/yt_grey.svg";
 import Image from "next/image";
+import mailIcon from "../../public/mailIcon.svg";
+import locationIcon from "../../public/locationIcon.svg";
+import phoneIcon from "../../public/phoneIcon.svg";
 
 function Contact() {
   return (
@@ -23,9 +26,18 @@ function Contact() {
           ></iframe>
           <div className={styles.infoContainer}>
             <ul className={styles.info}>
-              <li>571 52 56 58</li>
-              <li>თბილისი, ი.მაჩაბლის 17</li>
-              <li>info@younggreens.ge</li>
+              <li className={styles.contactLi}>
+                <Image src={phoneIcon} width={24} height={24} />
+                <p>571 52 56 58</p>
+              </li>
+              <li className={styles.contactLi}>
+                <Image src={mailIcon} width={24} height={24} />
+                <p>თბილისი, ი.მაჩაბლის 17</p>
+              </li>
+              <li className={styles.contactLi}>
+                <Image src={phoneIcon} width={24} height={24} />
+                <p>info@younggreens.ge</p>
+              </li>
             </ul>
             <ul className={styles.socialMedia}>
               <li>
@@ -95,6 +107,14 @@ function Contact() {
               </label>
             </div>
           </form>
+          <button
+            className={styles.payButton}
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          >
+            გაგზავნა
+          </button>
         </div>
       </div>
     </main>

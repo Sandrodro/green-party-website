@@ -1,4 +1,4 @@
-import { getAllData, getNewsArticles } from "../api";
+import { getNewsArticles } from "../api";
 import NewsCard from "../components/NewsCard";
 import styles from "./index.module.css";
 import BigCard from "../components/BigCard";

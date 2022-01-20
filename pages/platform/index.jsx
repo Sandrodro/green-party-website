@@ -52,4 +52,13 @@ function Platform() {
   );
 }
 
+export async function getStaticProps() {
+  const res = await fetch("https://api.mtsvaneebi.ge/api/v2/pages/18/");
+  const json = await res.json();
+  return {
+    props: json,
+    revalidate: 1,
+  };
+}
+
 export default Platform;

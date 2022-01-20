@@ -21,6 +21,7 @@
   line-height: 81px;
   text-align: center;
   margin: 80px;
+  font-family: "FiraGo Bold";
 }
 
 .circularCardContainer {
@@ -50,6 +51,7 @@
   color: #707070;
   padding-bottom: 14px;
   border-bottom: 3px solid #69a44a;
+  font-family: "FiraGo Bold";
 }
 
 .newsButton {

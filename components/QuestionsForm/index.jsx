@@ -1,5 +1,19 @@
 import styles from "./styles.module.css";
 import Collapsible from "react-collapsible";
+import Image from "next/image";
+import star from "../../public/star.svg";
+import downArrow from "../../public/downArrowForm.svg";
+
+function CollapsibleTrigger({ title }) {
+  return (
+    <>
+      <span>{title}</span>
+      <span className={styles.arrow}>
+        <Image src={downArrow} height={24} width={24} />
+      </span>
+    </>
+  );
+}
 
 function QuestionsForm() {
   return (
@@ -11,16 +25,23 @@ function QuestionsForm() {
     >
       <h1 className={styles.headline}>წევრობის მსურველის განაცხადი</h1>
       <p className={styles.subHeadline}>
+        <span>
+          <Image src={star} width={24} height={24} />
+        </span>
         აპლიკაციის შევსებამდე გაეცანით ჩვენს წესდებას , შინაგანაწესსა და
         პოლიტიკურ პლატფორმას
       </p>
       <p className={styles.subHeadline}>
+        <span>
+          <Image src={star} width={24} height={24} />
+        </span>
         სიმბოლოთი აღნიშნული ველების შევსება სავალდებულოა
       </p>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="პირადი ინფორმაცია"
-        triggerTagName="div"
+        trigger={<CollapsibleTrigger title="პირადი ინფორმაცია" />}
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <div className={styles.privateInfoContainer}>
           <label htmlFor="name">
@@ -75,8 +96,11 @@ function QuestionsForm() {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="რა საშუალებით გაიგეთ ჩვენი ორგანიზაციის შესახებ?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="რა საშუალებით გაიგეთ ჩვენი ორგანიზაციის შესახებ?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <div className={styles.choiceContainer}>
           <div className={styles.choice}>
@@ -97,8 +121,11 @@ function QuestionsForm() {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="ჩამოთვლილთაგან აირჩიეთ თქვენთვის საინტერესო თემები, რომლებზეც ისურვებდით მუშაობას"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="ჩამოთვლილთაგან აირჩიეთ თქვენთვის საინტერესო თემები, რომლებზეც ისურვებდით მუშაობას" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <div className={styles.choiceContainer}>
           <div className={styles.choice}>
@@ -129,8 +156,11 @@ function QuestionsForm() {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="რომელიმე სხვა ორგანიზაციაში თუ ხართ გაწევრიანებული?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="რომელიმე სხვა ორგანიზაციაში თუ ხართ გაწევრიანებული?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <div className={styles.choiceContainer}>
           <div className={styles.choice}>
@@ -143,8 +173,9 @@ function QuestionsForm() {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="მოგვიყევით მოკლედ თქვენ შესახებ"
-        triggerTagName="div"
+        trigger={<CollapsibleTrigger title="მოგვიყევით მოკლედ თქვენ შესახებ" />}
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <div className={styles.textAreaContainer}>
           <label htmlFor="aboutYou">
@@ -160,8 +191,11 @@ function QuestionsForm() {
       </Collapsible>
       <Collapsible
         classParentString={styles.Collapsible}
-        trigger="რატომ გსურთ ჩვენს ორგანიზაციაში გაწევრიანება?"
-        triggerTagName="div"
+        trigger={
+          <CollapsibleTrigger title="რატომ გსურთ ჩვენს ორგანიზაციაში გაწევრიანება?" />
+        }
+        triggerClassName={styles.triggerClosed}
+        triggerOpenedClassName={styles.triggerOpened}
       >
         <div className={styles.textAreaContainer}>
           <label htmlFor="aboutYou">
@@ -175,6 +209,14 @@ function QuestionsForm() {
           </label>
         </div>
       </Collapsible>
+      <button
+        className={styles.payButton}
+        onClick={(e) => {
+          e.preventDefault();
+        }}
+      >
+        გაგზავნა
+      </button>
     </form>
   );
 }

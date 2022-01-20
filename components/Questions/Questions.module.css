@@ -32,3 +32,24 @@
   font-size: 40px;
   color: #707070;
 }
+
+.triggerClosed {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.triggerOpened {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.triggerClosed .arrow,
+.triggerOpened .arrow {
+  transition: all 0.4s;
+}
+
+.triggerOpened .arrow {
+  transform: rotate(180deg);
+}
