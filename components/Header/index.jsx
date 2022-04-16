@@ -107,7 +107,7 @@ function Header({ title, indexPage, newsPage, headline }) {
           <label htmlFor="searchTop">
             <input
               type="text"
-              placeholder="Search here"
+              placeholder="ძიება საიტზე"
               className={styles.searchTop}
               id="searchTop"
             />

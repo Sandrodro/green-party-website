@@ -42,7 +42,7 @@ function Home({ news }) {
               className={styles.leftIcon}
             />
           </button>
-          <button
+          {/* <button
             disabled={news.length <= articleNumber ? true : false}
             className={
               news.length <= articleNumber
@@ -52,11 +52,11 @@ function Home({ news }) {
             onClick={() => setArticleNumber((number) => number + 4)}
           >
             <Image src={btnRight} width={24} height={24} />
-          </button>
+          </button> */}
         </div>
       </div>
       <section className={styles.newsContainer}>
-        {news.map((news, index) => {
+        {/* {news.map((news, index) => {
           if (index >= articleNumber - 4 && index < articleNumber) {
             return (
               <Link href={`/news/${news.id}`} key={`link-${news.id}`} passHref>
@@ -64,7 +64,7 @@ function Home({ news }) {
               </Link>
             );
           }
-        })}
+        })} */}
       </section>
       <h1 className={styles.newsHeader}>რა შეგიძლია შენ?</h1>
       <section className={styles.bigCardContainer}>
@@ -101,14 +101,14 @@ function Home({ news }) {
   );
 }
 
-export async function getStaticProps() {
-  const posts = await getNewsArticles();
-  return {
-    props: {
-      news: posts.posts.reverse(),
-    },
-    revalidate: 10,
-  };
-}
+// export async function getStaticProps() {
+//   const posts = await getNewsArticles();
+//   return {
+//     props: {
+//       news: posts.posts.reverse(),
+//     },
+//     revalidate: 10,
+//   };
+// }
 
 export default Home;

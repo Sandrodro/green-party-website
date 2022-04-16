@@ -73,7 +73,7 @@ function Footer() {
               </strong>
             </li>
             <li>
-              <Link href="/participate" passHref>
+              <Link href="/participate/#FAQ" passHref>
                 F.A.Q
               </Link>
             </li>

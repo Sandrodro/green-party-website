@@ -17,6 +17,7 @@ function CollapsibleTrigger({ title }) {
 function Questions({ form }) {
   return (
     <form
+      id="FAQ"
       className={styles.container}
       onSubmit={(e) => {
         e.preventDefault();

@@ -171,3 +171,7 @@
 .activeLink img {
   transform: rotate(180deg);
 }
+
+.linkList li {
+  font-size: 18px;
+}

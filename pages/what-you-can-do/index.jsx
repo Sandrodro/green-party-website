@@ -25,7 +25,6 @@ function WhatYouCanDo() {
           image={puzzleCircular}
           text="მიიღე მონაწილეობა მწვანე პლატფორმის შექმნაში"
         />
-        <CircularCard image={blueCircular} text="გახდი წევრი" />
         <CircularCard
           image={blueCircular}
           text="გახდი ინფორმაციის გამავრცელებელი - გამოგვყევი სოციალურ ქსელბში"

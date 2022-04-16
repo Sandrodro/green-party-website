@@ -38,11 +38,11 @@ function Platform() {
         შესწორებების მიღებასა და დამტკიცებაში.
       </p>
       <h1 className={styles.newsHeader}>რა შეგიძლია შენ?</h1>
-      <div className={styles.memberContainer}>
+      {/* <div className={styles.memberContainer}>
         <MemberCard imgLink="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" />
         <MemberCard imgLink="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" />
         <MemberCard imgLink="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" />
-      </div>
+      </div> */}
       <div className={styles.formContainer}>
         <SubscribeForm />
         <FinanceForm />
@@ -51,13 +51,13 @@ function Platform() {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://api.mtsvaneebi.ge/api/v2/pages/18/");
-  const json = await res.json();
-  return {
-    props: json,
-    revalidate: 1,
-  };
-}
+// export async function getStaticProps() {
+//   const res = await fetch("https://api.mtsvaneebi.ge/api/v2/pages/18/");
+//   const json = await res.json();
+//   return {
+//     props: json,
+//     revalidate: 1,
+//   };
+// }
 
 export default Platform;
