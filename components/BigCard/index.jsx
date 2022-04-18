@@ -9,7 +9,7 @@ function BigCard({ img, title }) {
     >
       <div className={styles.outer}>
         <div className={styles.inner}>
-          <Image src={img} height={505} width={515} alt="cardImage" />
+          <Image src={img} height={400} width={410} alt="cardImage" />
         </div>
         <h2>{title}</h2>
       </div>

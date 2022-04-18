@@ -16,8 +16,8 @@ function Contact() {
         <div className={styles.mapContainer}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8800.339538974331!2d44.793879479039894!3d41.68863123776619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cf26b7bb867%3A0xa62dcca7bd4425ad!2zMTcg4YOY4YOV4YOQ4YOc4YOUIOGDm-GDkOGDqeGDkOGDkeGDlOGDmuGDmOGDoSDhg6Xhg6Phg6nhg5AsIOGDl-GDkeGDmOGDmuGDmOGDoeGDmA!5e0!3m2!1ska!2sge!4v1642593264347!5m2!1ska!2sge"
-            width="812"
-            height="618"
+            width="612"
+            height="418"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"

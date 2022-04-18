@@ -12,7 +12,7 @@ function Footer() {
   return (
     <footer className={`${styles.footerContainer} container`}>
       <div className={`container ${styles.inner}`}>
-        <div className={styles.searchBar}>
+        {/* <div className={styles.searchBar}>
           <label htmlFor="searchInput">
             <input
               type="text"
@@ -24,7 +24,7 @@ function Footer() {
           <button className={styles.searchButton}>
             <Image src={arrow} width={34} height={34} alt="button" />
           </button>
-        </div>
+        </div> */}
         <div className={styles.links}>
           <ul className={styles.singleLinkGroup}>
             <li style={{ opacity: "100%" }}>
