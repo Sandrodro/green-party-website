@@ -4,6 +4,7 @@ function SubscribeForm({ fullWidth }) {
   return (
     <div
       className={fullWidth ? styles.formContainerFull : styles.formContainer}
+      id="subscribeForm"
     >
       <div className={styles.text}>
         <h1>გამოიწერე</h1>

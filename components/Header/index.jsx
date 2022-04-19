@@ -112,7 +112,7 @@ function Header({ title, indexPage, newsPage, headline }) {
               id="searchTop"
             />
           </label>
-          <Link href="/participate" passHref>
+          <Link href="/participate/#subscribeForm" passHref>
             <button className={styles.participateButton}>გააქტიურდი</button>
           </Link>
         </div>
@@ -122,7 +122,7 @@ function Header({ title, indexPage, newsPage, headline }) {
         {newsPage ? <h1 className={styles.newsHeadline}>{headline}</h1> : null}
       </h1>
       {indexPage ? (
-        <Link href="/participate" passHref>
+        <Link href="/participate/#subscribeForm" passHref>
           <button className={styles.button}>
             გააქტიურდი{" "}
             <Image
