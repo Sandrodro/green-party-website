@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>მწვანეები</title>
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <Footer />
     </>
   );
